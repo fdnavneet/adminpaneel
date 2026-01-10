@@ -1,5 +1,6 @@
 🔗 Live Demo :
-    -https://adminpaneel-mh52.vercel.app/
+    -https://adminpaneel-eight.vercel.app/
+    
 
 
 
