@@ -41,7 +41,7 @@ const Login = () => {
       <div className="min-h-screen flex bg-slate-100">
         <div className="hidden lg:flex w-1/2 bg-indigo-600 text-white p-12 flex-col justify-between">
           <div>
-            <h1 className="text-3xl font-bold">Employee Dashboard Login</h1>
+            <h1 className="text-3xl font-bold">Admin Dashboard Login</h1>
             <p className="mt-4 text-indigo-200">Manage employees</p>
           </div>
         </div>
@@ -51,7 +51,7 @@ const Login = () => {
             <h2 className="text-2xl font-bold text-gray-800">
               Welcome Back 👋
             </h2>
-            <p className="text-gray-500 mt-1">Login to your dashboard</p>
+            <p className="text-gray-500 mt-1">Login To Admin Dashboard</p>
 
             <form onSubmit={handleLogin} className="mt-6 space-y-4">
               <div>
@@ -90,15 +90,7 @@ const Login = () => {
                 ) : null}
               </div>
 
-              <div className="flex items-center justify-between text-sm">
-                <label className="flex items-center gap-2">
-                  <input type="checkbox" className="rounded" />
-                  Remember me
-                </label>
-                <a href="#" className="text-indigo-600 hover:underline">
-                  Forgot password?
-                </a>
-              </div>
+             
 
               <button
                 type="submit"
@@ -109,12 +101,7 @@ const Login = () => {
               {error.auth && <p style={{ color: "red" }}>{error.auth}</p>}
             </form>
 
-            <p className="text-center text-sm text-gray-500 mt-6">
-              Don’t have an account?{" "}
-              <span className="text-indigo-600 font-medium cursor-pointer">
-                Register
-              </span>
-            </p>
+      
           </div>
         </div>
       </div>
