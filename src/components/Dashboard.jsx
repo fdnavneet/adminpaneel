@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { getEmployees, saveEmployees } from "../utils/storage";
 import EmployeeForm from "./EmployeeForm";
@@ -6,7 +5,6 @@ import EmployeeTable from "./EmployeeTable";
 import Navbar from "./Navbar";
 
 const Dashboard = () => {
-
   const [employees, setEmployees] = useState([]);
   const [editIndex, setEditIndex] = useState(null);
 
@@ -44,12 +42,9 @@ const Dashboard = () => {
   const filteredEmployees = employees
     .map((emp, index) => ({ ...emp, originalIndex: index }))
     .filter((emp) => {
-      const matchName = emp.name
-        .toLowerCase()
-        .includes(search.toLowerCase());
+      const matchName = emp.name.toLowerCase().includes(search.toLowerCase());
 
-      const matchGender =
-        genderFilter === "" || emp.gender === genderFilter;
+      const matchGender = genderFilter === "" || emp.gender === genderFilter;
 
       const matchStatus =
         statusFilter === ""
@@ -63,8 +58,7 @@ const Dashboard = () => {
 
   return (
     <div className="min-h-screen bg-gray-100 p-4 md:p-8">
-      
-      <Navbar employees = {employees} />
+      <Navbar employees={employees} />
 
       <div className="bg-white p-4 rounded-lg shadow mb-6">
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
